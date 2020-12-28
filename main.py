@@ -1,7 +1,11 @@
 import cv2
 
 
+# Xml file from OpenCv to detect the face
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+
+
+# Read the image
 img = cv2.imread("people1.jpg")
 img = cv2.resize(img, (400,400))
 
