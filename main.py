@@ -6,7 +6,7 @@ face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 
 # Read the image
-img = cv2.imread("Images/people1.jpg")
+img = cv2.imread("Images/Steve.jpg")
 img = cv2.resize(img, (400,400))
 
 
