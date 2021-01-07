@@ -21,4 +21,4 @@ As in the Main.py, you will need to install OpenCv and the CascadeClassifer file
 
 
 Main2.py is a simple Text Detection system to find the letters in a image.
-To execute the file, you will need OpenCv and pytesseract
+To execute the file, you will need OpenCv and pytesseract (https://github.com/tesseract-ocr/tesseract)
