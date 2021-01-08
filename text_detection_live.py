@@ -16,8 +16,10 @@ cap = cv2.VideoCapture(0)
 while cap.isOpened():
     ret, img = cap.read()
 
-    #Convert the image
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    # Convert the image
+    # BGR2BGRA = Real colours
+    # BGR2HSV = For colour detection
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2BGRA)
 
     # Print the characters detected in the terminal
     print(pytesseract.image_to_string(Image.fromarray(img)))
