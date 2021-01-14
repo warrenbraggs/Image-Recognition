@@ -4,6 +4,8 @@ import cv2
 import pytesseract 
 from PIL import Image 
 
+print("hello")
+
 
 #Add the path for tesseract
 pytesseract.pytesseract.tesseract_cmd = r"/usr/local/Cellar/tesseract/4.1.1/bin/tesseract"
