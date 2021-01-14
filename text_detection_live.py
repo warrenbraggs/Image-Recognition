@@ -4,7 +4,7 @@ import cv2
 import pytesseract 
 from PIL import Image 
 
-print("hello")
+
 
 
 #Add the path for tesseract
