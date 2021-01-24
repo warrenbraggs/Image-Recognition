@@ -26,3 +26,5 @@ To execute the file, you will need OpenCv and pytesseract (https://github.com/te
 
 text_detection_live.py is a simple Text Detection system to find the letter in a real time frame.
 To exectute the file, you will need to install OpenCv and pytesseract as above.
+
+https://www.youtube.com/watch?v=DGAB34fJQFc
