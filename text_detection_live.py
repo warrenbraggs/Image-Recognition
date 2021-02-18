@@ -21,8 +21,7 @@ while cap.isOpened():
     # Convert the image
     # BGR2BGRA = Real colours
     # BGR2HSV = For colour detection
-    t_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-
+    #t_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
     # Detect the most frequent colour in a image
     b,g,r = (img[300, 300])
@@ -30,22 +29,17 @@ while cap.isOpened():
     print (g)
     print (b)
 
+
     # Print the characters detected in the terminal
     print(pytesseract.image_to_string(Image.fromarray(img)))
 
-    # Get the size of the frame
-    h_image = img.shape[0]
-    w_image = img.shape[1]
+    #
+    #
+    #
+    #
+    #
 
-    # Detect the characters in the frame
-    boxes = pytesseract.image_to_boxes(Image.fromarray(img))
-
-    for i in boxes.splitlines():
-        i = i.split(' ')
-        x,y,w,h = int(i[1]), int(i[2]), int(i[3]), int(i[4])
-        cv2.rectangle(img, (x, h_image-y), (w,h_image-h), (0,255,0),2)
     
-
     #Display the frame
     cv2.imshow('main', img)
 
