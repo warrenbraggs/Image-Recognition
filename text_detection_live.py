@@ -1,9 +1,9 @@
 #Text recognition real time
 
 import cv2
+import numpy as np 
 import pytesseract 
 from PIL import Image 
-
 
 
 
@@ -22,18 +22,28 @@ while cap.isOpened():
     count +=1
 
     if count%20 == 0:
-        ret, img = cap.read()
+        _,img = cap.read()
 
         # Convert the image
         # BGR2BGRA = Real colours
         # BGR2HSV = For colour detection
         #t_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
-        # Detect the most frequent colour in a image
-        b,g,r = (img[300, 300])
-        print (r)
-        print (g)
-        print (b)
+
+        # setting values for base colors 
+        b = img[:, :, :1] 
+        g = img[:, :, 1:2] 
+        r = img[:, :, 2:] 
+      
+        # computing the mean 
+        b_mean = np.mean(b) 
+        g_mean = np.mean(g) 
+        r_mean = np.mean(r) 
+      
+        # displaying the most prominent color 
+        print(r_mean)
+        print(g_mean)
+        print(b_mean)
 
 
         # Print the characters detected in the terminal
